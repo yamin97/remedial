@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ujian</title>
+</head>
+
+<body>
+
+    <div id="output">
+    </div>
+
+    <input type="number" id="input" placeholder="masukan angka">
+    <button type="submit" onclick="segitiga()">klik</button>
+    <script>
+        function segitiga() {
+            var n = document.getElementById('input').value
+            var output = ''
+            var ganjil = 1
+            for (var i = 0; i < n; i++) {
+                for (var j = i; j < n; j++) {
+                    output += '\xa0'
+                }
+                for (var k = 0; k <= i; k++) {
+                    output += '\xa0' + ganjil
+                    ganjil = ganjil + 2
+                }
+                output += '\n'
+            }
+            document.getElementById('output').innerText = output
+        }
+        
+    </script>
+</body>
